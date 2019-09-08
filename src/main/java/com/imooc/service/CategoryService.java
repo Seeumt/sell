@@ -5,7 +5,7 @@ import com.imooc.dataobject.ProductCategory;
 import javax.persistence.Id;
 import java.util.List;
 
-public interface CatagoryService {
+public interface CategoryService {
     ProductCategory findOne(Integer categoryId);
 
     List<ProductCategory> findAll();
