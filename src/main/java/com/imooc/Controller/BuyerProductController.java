@@ -5,17 +5,18 @@ import com.imooc.VO.ProductVO;
 import com.imooc.VO.ResultVO;
 import com.imooc.dataobject.ProductCategory;
 import com.imooc.dataobject.ProductInfo;
-import com.imooc.service.CatagoryService;
+import com.imooc.service.CategoryService;
 import com.imooc.service.ProductService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +26,11 @@ import java.util.List;
 public class BuyerProductController {
 
 
-    @Autowired
+    @Resource
     private ProductService productService;
+    @Resource
+    private CategoryService categoryService;
+
     @RequestMapping(value = "/saveProductInfo",method = RequestMethod.POST)
     public ProductInfo saveProductInfo(ProductInfo productInfo) {
         return productService.save(productInfo);
@@ -40,21 +44,42 @@ public class BuyerProductController {
 
     @GetMapping("/list")
     public ResultVO list() {
+
+
+        //1.查询所有上架的商品
+        List<ProductInfo> productInfoList = productService.findUpAll();
+        //2.查询类目（一次性查询）
+        List<Integer> categoryTypeList = new ArrayList<>();
+        for (ProductInfo productInfo : productInfoList) {
+            categoryTypeList.add(productInfo.getCategoryType());
+        }
+        //!!!通过遍历并组装好的List结合，获得ProductCategory对象集合，
+        //接着遍历ProductCategory对象集合，弄好ProductVO的对象集合，
+        List<ProductCategory> productCategoryList = categoryService.findByCategoryTypeIn(categoryTypeList);
+        //3.数据拼装
+        ArrayList<ProductVO> productVOList = new ArrayList<>();
+        for (ProductCategory productCategory : productCategoryList) {
+            ProductVO productVO = new ProductVO();
+            productVO.setCategoryName(productCategory.getCategoryName());
+            productVO.setCategoryType(productCategory.getCategoryType());
+//            productVO.setProductInfoVOList(productService.findByTypeIn());
+            List<ProductInfoVO> productInfoVOList = new ArrayList<>();
+            for (ProductInfo productInfo : productInfoList) {
+
+                if (productInfo.getCategoryType().equals(productCategory.getCategoryType())) {
+                    ProductInfoVO productInfoVO = new ProductInfoVO();
+                    BeanUtils.copyProperties(productInfo, productInfoVO);
+                    productInfoVOList.add(productInfoVO);
+                }
+            }
+            productVO.setProductInfoVOList(productInfoVOList);
+            productVOList.add(productVO);
+        }
+
         ResultVO resultVO = new ResultVO<>();
         resultVO.setCode(0);
         resultVO.setMsg("成功");
-        List<ProductInfoVO> lists = new ArrayList<>();
-        lists.add(new ProductInfoVO("666","要成功",new BigDecimal(666),"不错哦","xxxx.com"));
-        lists.add(new ProductInfoVO("777","要成功",new BigDecimal(777),"不错哦","yyyy.com"));
-        lists.add(new ProductInfoVO("888","要成功",new BigDecimal(888),"不错哦","zzzz.com"));
-
-//        List<ProductVO> listss = new ArrayList<>();
-//        listss.add(new ProductVO("一", 1, lists));
-//        listss.add(new ProductVO("二", 2, lists));
-//        resultVO.setData(listss);
-
-
-        resultVO.setData(new ProductVO("一",1,lists));
+        resultVO.setData(productVOList);
         return resultVO;
 
 

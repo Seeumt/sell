@@ -12,4 +12,8 @@ public interface ProductService {
     Page<ProductInfo> findAll(Pageable pageable);
 
     ProductInfo save(ProductInfo productInfo);
+
+    List<ProductInfo> findUpAll();
+
+
 }
