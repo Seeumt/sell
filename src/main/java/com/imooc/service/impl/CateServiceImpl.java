@@ -8,14 +8,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class CataServiceImpl implements CategoryService {
+public class CateServiceImpl implements CategoryService {
 
     @Autowired
     private ProductCategoryRepository repository;
 
+
     @Override
     public ProductCategory findOne(Integer categoryId) {
-        return repository.findOne(categoryId);
+        return null;
     }
 
     @Override

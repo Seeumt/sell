@@ -7,6 +7,7 @@ import com.imooc.dataobject.ProductCategory;
 import com.imooc.dataobject.ProductInfo;
 import com.imooc.service.CategoryService;
 import com.imooc.service.ProductService;
+import com.imooc.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-
+@RequestMapping("/buyer")
 public class BuyerProductController {
 
 
@@ -55,6 +56,7 @@ public class BuyerProductController {
         }
         //!!!通过遍历并组装好的List结合，获得ProductCategory对象集合，
         //接着遍历ProductCategory对象集合，弄好ProductVO的对象集合，
+
         List<ProductCategory> productCategoryList = categoryService.findByCategoryTypeIn(categoryTypeList);
         //3.数据拼装
         ArrayList<ProductVO> productVOList = new ArrayList<>();
@@ -75,12 +77,7 @@ public class BuyerProductController {
             productVO.setProductInfoVOList(productInfoVOList);
             productVOList.add(productVO);
         }
-
-        ResultVO resultVO = new ResultVO<>();
-        resultVO.setCode(0);
-        resultVO.setMsg("成功");
-        resultVO.setData(productVOList);
-        return resultVO;
+        return ResultVOUtil.success(productVOList);
 
 
     }
