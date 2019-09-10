@@ -30,7 +30,7 @@ public class OrderServiceImplTest {
     @Test
     public void createTest() {
         OrderDTO orderDTO = new OrderDTO();
-        orderDTO.setBuyerName("Bear");
+        orderDTO.setBuyerName("Cat");
         orderDTO.setBuyerAddress("shanghai");
         orderDTO.setBuyerPhone("18666666666");
         orderDTO.setBuyerOpenid(BUYER_OPENID);
@@ -63,13 +63,24 @@ public class OrderServiceImplTest {
 
     @Test
     public void cancel() {
+        OrderDTO orderDTO = orderService.findOne("1568107162038333046");
+
+        orderService.cancel(orderDTO);
     }
 
     @Test
     public void finish() {
+        OrderDTO orderDTO = orderService.findOne("1568082108612944259");
+        orderService.finish(orderDTO);
+
+
     }
 
     @Test
     public void paid() {
+        OrderDTO orderDTO = orderService.findOne("1568085098800317228");
+        orderService.paid(orderDTO);
     }
+
+
 }
