@@ -18,6 +18,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -118,7 +119,23 @@ public class OrderServiceImpl implements OrderService {
     public Page<OrderDTO> findList(String buyerOpenid, Pageable pageable) {
         Page<OrderMaster> orderMasterPage = orderMasterRepository.findByBuyerOpenid(buyerOpenid,pageable);
 //        PageImpl<OrderDTO> orderDTOPage = new PageImpl<OrderDTO>();
-        return null;
+        List<OrderMaster> content = orderMasterPage.getContent();
+        List<OrderDTO> orderDTOList = this.convert(content);
+//
+        PageImpl<OrderDTO> orderDTOPage = new PageImpl<>(orderDTOList, pageable, orderMasterPage.getTotalElements());
+        return orderDTOPage;
+    }
+
+    public  List<OrderDTO> convert(List<OrderMaster> orderMasterList) {
+        List<OrderDTO> orderDTOList = new ArrayList<>();
+        OrderDTO orderDTO = new OrderDTO();
+        for (OrderMaster orderMaster : orderMasterList) {
+            BeanUtils.copyProperties(orderMaster,orderDTO);
+            List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderMaster.getOrderId());
+            orderDTO.setOrderDetailList(orderDetailList);
+            orderDTOList.add(orderDTO);
+        }
+        return orderDTOList;
     }
 
     @Override
