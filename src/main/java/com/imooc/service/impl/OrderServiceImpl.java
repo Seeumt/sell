@@ -14,6 +14,7 @@ import com.imooc.repository.OrderMasterRepository;
 import com.imooc.service.OrderService;
 import com.imooc.service.ProductService;
 import com.imooc.utils.KeyUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -31,6 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class OrderServiceImpl implements OrderService {
     @Autowired
     private ProductService productService;
@@ -140,6 +142,31 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderDTO cancel(OrderDTO orderDTO) {
+        OrderMaster orderMaster = new OrderMaster();
+        if (!orderDTO.getPayStatus().equals(OrderStatusEnum.NEW)) {
+            log.error("【取消订单】订单状态不正确, orderId={}, orderStatus={}", orderDTO.getOrderId(), orderDTO.getOrderStatus());
+            throw new SellException(ResultEnum.ORDER_STATUS_ERROR);
+        }
+        orderDTO.setPayStatus(OrderStatusEnum.CANCEL.getCode());
+        BeanUtils.copyProperties(orderDTO, orderMaster);
+        //保存/更新了还要记得判空
+        OrderMaster updateResult = orderMasterRepository.save(orderMaster);
+        if (updateResult == null) {
+            log.error("【取消订单】更新失败, orderMaster={}", orderMaster);
+            throw new SellException(ResultEnum.ORDER_UPDATE_FAIL);
+        }
+
+        //返回库存
+        if (CollectionUtils.isEmpty(orderDTO.getOrderDetailList())) {
+            throw new SellException(ResultEnum.ORDER_DETAIL_EMPTY);
+        }
+        List<CartDTO> cartDTOList = new ArrayList<>();
+        for (OrderDetail orderDetail : orderDTO.getOrderDetailList()) {
+            CartDTO cartDTO = new CartDTO(orderDetail.getProductId(),orderDetail.getProductQuantity());
+            cartDTOList.add(cartDTO);
+        }
+        productService.increaseStock(cartDTOList);
+
         return null;
     }
 
