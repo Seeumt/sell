@@ -29,3 +29,7 @@ logging:
 server:
   context-path: /sell
 #    com.imooc.LoggerTestBetter: debug
+
+wechat:
+  mpAppId: wxe50e100d05b3827b
+  mpAppSecret: f882cb83cced8367542067d71208de03
