@@ -7,25 +7,28 @@ import me.chanjar.weixin.mp.api.impl.WxMpServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+
 @Component
 
 public class WechatMpConfig {
+    @Resource
+    private WechatAccountConfig accountConfig;
+
     @Bean
     public WxMpService wxMpService() {
         WxMpService wxMpService = new WxMpServiceImpl();
         wxMpService.setWxMpConfigStorage(wxMpConfigStorage());
 
-        // TODO: 2019/9/10
-        return null;
+
+        return wxMpService;
     }
 
     @Bean
     public WxMpConfigStorage wxMpConfigStorage() {
         WxMpInMemoryConfigStorage wxMpConfigStorage = new WxMpInMemoryConfigStorage();
-        // TODO: 2019/9/10 7-4 8' 58''
-
-//        wxMpConfigStorage.setAppId();
-////        wxMpConfigStorage.setSecret();
-        return null;
+        wxMpConfigStorage.setAppId(accountConfig.getMpAppId());
+        wxMpConfigStorage.setSecret(accountConfig.getMpAppSecret());
+        return wxMpConfigStorage;
     }
 }
