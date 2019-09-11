@@ -30,4 +30,11 @@ public class OrderController {
         return orderDTOPage;
     }
 
+    @PostMapping("/AllOrders")
+    public Page<OrderDTO> findOne(int page, int size) {
+        PageRequest pageRequest = new PageRequest(page,size);
+        Page<OrderDTO> orderDTOPage = orderService.findList(pageRequest);
+        return orderDTOPage;
+    }
+
 }

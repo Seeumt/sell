@@ -122,7 +122,7 @@ public class OrderServiceImpl implements OrderService {
         Page<OrderMaster> orderMasterPage = orderMasterRepository.findByBuyerOpenid(buyerOpenid,pageable);
 //        PageImpl<OrderDTO> orderDTOPage = new PageImpl<OrderDTO>();
         List<OrderMaster> content = orderMasterPage.getContent();
-        List<OrderDTO> orderDTOList = this.convert(content);
+        List<OrderDTO> orderDTOList = convert(content);
 //
         PageImpl<OrderDTO> orderDTOPage = new PageImpl<>(orderDTOList, pageable, orderMasterPage.getTotalElements());
         return orderDTOPage;
@@ -130,8 +130,8 @@ public class OrderServiceImpl implements OrderService {
 
     public  List<OrderDTO> convert(List<OrderMaster> orderMasterList) {
         List<OrderDTO> orderDTOList = new ArrayList<>();
-        OrderDTO orderDTO = new OrderDTO();
         for (OrderMaster orderMaster : orderMasterList) {
+            OrderDTO orderDTO = new OrderDTO();
             BeanUtils.copyProperties(orderMaster,orderDTO);
             List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderMaster.getOrderId());
             orderDTO.setOrderDetailList(orderDetailList);
@@ -218,5 +218,14 @@ public class OrderServiceImpl implements OrderService {
         }
 
         return orderDTO;
+    }
+
+    @Override
+    public Page<OrderDTO> findList(Pageable pageable) {
+        Page<OrderMaster> orderMasterPage = orderMasterRepository.findAll(pageable);
+        List<OrderMaster> content = orderMasterPage.getContent();
+        List<OrderDTO> orderDTOList = this.convert(content);
+        PageImpl<OrderDTO> orderDTOPage = new PageImpl<>(orderDTOList, pageable, orderMasterPage.getTotalElements());
+        return orderDTOPage;
     }
 }

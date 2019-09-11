@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import javax.swing.*;
 
 import java.math.BigDecimal;
@@ -19,17 +20,19 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class OrderDetailRepositoryTest {
     @Autowired
-    private OrderDetailRepository repository;
+    private OrderDetailRepository orderDetailRepository;
     @Test
     public void test1() {
-        List<OrderDetail> byOrderId = repository.findByOrderId("123456");
-        System.out.println(byOrderId);
+        List<OrderDetail> all = orderDetailRepository.findByOrderId("1568204989304220665");
+        for (OrderDetail orderDetail : all) {
+            System.out.println(orderDetail);
+        }
     }
 
     @Test
     public void saveTest() {
         OrderDetail orderDetail = new OrderDetail("159753", "2", "2", "xx?", new BigDecimal(66), 6, "xxxx.ss");
-        repository.save(orderDetail);
+        orderDetailRepository.save(orderDetail);
     }
 
 }
