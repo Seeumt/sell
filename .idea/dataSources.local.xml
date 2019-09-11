@@ -4,6 +4,7 @@
     <data-source name="MySQL for 5.1 - sell@localhost" uuid="89a60f83-c3bb-4d3b-b36d-6b5f54e70f51">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <secret-storage>forget</secret-storage>
+      <introspection-schemas>*:@</introspection-schemas>
     </data-source>
     <data-source name="@localhost" uuid="34b2e887-155b-4a8f-a4a5-6d6ac5517565">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
