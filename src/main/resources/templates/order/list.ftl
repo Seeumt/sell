@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <title>卖家商品列表</title>
     <link href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
-    <body>
+</head>
+<body>
     <div class="container">
         <div class="row clearfix">
             <div class="col-md-12 column">
@@ -38,8 +39,12 @@
                                 <td>${orderDTO.getOrderStatusEnum().msg}</td>
                                 <td>${orderDTO.getPayStatusEnum().msg}</td>
                                 <td>${orderDTO.createTime}</td>
-                                <td>详情</td>
-                                <td>取消</td>
+                                <td><a href="/sell/seller/order/detail?orderId=${orderDTO.orderId}">详情</a></td>
+                                <td>
+                                    <#if orderDTO.getOrderStatusEnum().msg=="新订单">
+                                    <a href="/sell/seller/order/cancel?orderId=${orderDTO.orderId}">取消</a></td>
+                                    </#if>
+
                             </tr>
                         </#list>
                     </tbody>
@@ -71,5 +76,5 @@
         </div>
     </div>
 </body>
-</head>
+
 </html>
