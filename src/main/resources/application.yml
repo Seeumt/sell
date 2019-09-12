@@ -16,7 +16,6 @@ spring:
 
 
 
-
 logging:
   pattern:
     console: '%d - %msg%n'
@@ -28,6 +27,7 @@ logging:
 #  level:
 server:
   context-path: /sell
+  port: 8090
 #    com.imooc.LoggerTestBetter: debug
 
 wechat:

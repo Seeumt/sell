@@ -21,16 +21,18 @@ public class SellerOrderController {
     @Autowired
     private OrderService orderService;
     @GetMapping("/list")
-    public ModelAndView list(@RequestParam(value = "page",defaultValue = "0") Integer page,
+    public ModelAndView list(@RequestParam(value = "page",defaultValue = "1") Integer page,
                              @RequestParam(value = "size",defaultValue = "3")Integer size,
                                      Map<String,Object> map) {
-        PageRequest request = new PageRequest(page,size);
+        PageRequest request = new PageRequest(page-1,size);
         Page<OrderDTO> orderDTOPage = orderService.findList(request);
         /*
         map是一个模板？
         把结果写到模板里去
          */
         map.put("orderDTOPage", orderDTOPage);
+        map.put("currentPage", page);
+        map.put("size", 3);
         return new ModelAndView(("order/list"), map);
     }
 }
