@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <title>卖家商品列表</title>
     <link href="https://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
-    <body>
+</head>
+<body>
     <div class="container">
         <div class="row clearfix">
             <div class="col-md-12 column">
@@ -38,15 +39,42 @@
                                 <td>${orderDTO.getOrderStatusEnum().msg}</td>
                                 <td>${orderDTO.getPayStatusEnum().msg}</td>
                                 <td>${orderDTO.createTime}</td>
-                                <td>详情</td>
-                                <td>取消</td>
+                                <td><a href="/sell/seller/order/detail?orderId=${orderDTO.orderId}">详情</a></td>
+                                <td>
+                                    <#if orderDTO.getOrderStatusEnum().msg=="新订单">
+                                    <a href="/sell/seller/order/cancel?orderId=${orderDTO.orderId}">取消</a></td>
+                                    </#if>
+
                             </tr>
                         </#list>
                     </tbody>
                 </table>
             </div>
+            <div class="col-md-12 column">
+                <ul class="pagination pull-right">
+                    <#if currentPage lte 1>
+                        <li class="disabled"><a href="#">上一页</a></li>
+                    <#else>
+                        <li><a href="/sell/seller/order/list?page=${currentPage - 1}&size=${size}">上一页</a></li>
+                    </#if>
+
+                    <#list 1..orderDTOPage.getTotalPages() as index>
+                        <#if currentPage == index>
+                            <li class="disabled"><a href="#">${index}</a></li>
+                        <#else>
+                            <li><a href="/sell/seller/order/list?page=${index}&size=${size}">${index}</a></li>
+                        </#if>
+                    </#list>
+
+                    <#if currentPage gte orderDTOPage.getTotalPages()>
+                        <li class="disabled"><a href="#">下一页</a></li>
+                    <#else>
+                        <li><a href="/sell/seller/order/list?page=${currentPage + 1}&size=${size}">下一页</a></li>
+                    </#if>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
-</head>
+
 </html>
