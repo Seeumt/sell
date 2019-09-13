@@ -13,10 +13,9 @@ public class CateServiceImpl implements CategoryService {
     @Autowired
     private ProductCategoryRepository repository;
 
-
     @Override
     public ProductCategory findOne(Integer categoryId) {
-        return null;
+        return repository.findOne(categoryId);
     }
 
     @Override
