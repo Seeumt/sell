@@ -6,7 +6,9 @@ spring:
     url: jdbc:mysql:///sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
-
+  redis:
+    host: 127.0.0.1
+    port: 6379
 
 
 
@@ -27,15 +29,22 @@ logging:
 #  level:
 server:
   context-path: /sell
-  port: 8090
+  port: 8080
 #    com.imooc.LoggerTestBetter: debug
 
 wechat:
   mpAppId: wxe50e100d05b3827b
   mpAppSecret: f882cb83cced8367542067d71208de03
+  openAppId:
+  openAppSecret:
 #  mpAppId: wxd898fcb01713c658
 #  mpAppSecret: 29d8a650db31472aa87800e3b0d739f2
   mchId: 1409146202
   mchKey: c976503d34ca432c601361f969fd8d85
   keyPath: /var/weixin_cert/h5.p12
   notifyUrl: http://seeumt.natapp1.cc/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorzie:
+  wechatOpenAuthorzie:
+  sell: http://seeumt.natapp1.cc

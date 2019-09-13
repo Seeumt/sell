@@ -12,7 +12,7 @@ import java.util.Objects;
 @DynamicUpdate
 public class SellerInfo {
     @Id
-    private String id;
+    private String sellerId;
     private String username;
     private String password;
     private String openid;
