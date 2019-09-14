@@ -27,6 +27,8 @@ logging:
 #    root: debug
 #  level: debug 不行
 #  level:
+#    root: com.imooc.dataobject.mapper：trace 无法打印sql语句
+
 server:
   context-path: /sell
   port: 8080
@@ -43,8 +45,9 @@ wechat:
   mchKey: c976503d34ca432c601361f969fd8d85
   keyPath: /var/weixin_cert/h5.p12
   notifyUrl: http://seeumt.natapp1.cc/sell/pay/notify
-
+  templateId:
+    orderStatus: gfdjslkfhdsjlkfhldsk还不知道
 projectUrl:
-  wechatMpAuthorzie:
-  wechatOpenAuthorzie:
+  wechatMpAuthorzie:  http://seeumt.natapp1.cc
+  wechatOpenAuthorzie: http://seeumt.natapp1.cc
   sell: http://seeumt.natapp1.cc

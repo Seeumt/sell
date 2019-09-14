@@ -2,26 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b55288d-e3fc-480c-87ee-59c79d86b7f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/config/ProjectUrlConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatOpenConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/constant/CookieConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/constant/RedisConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/repository/SellerInfoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/service/SellerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/SellerInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/utils/CookieUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/imooc/repository/SellerInfoRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/imooc/service/impl/SellerInfoServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/aspect/SellerAuthorizeAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/dataobject/dao/ProductCategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/dataobject/mapper/ProductCategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/exception/ResponseBankException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/exception/SellerAuthorizeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/handler/SellExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/service/PushMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/PushMessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imooc/dataobject/mapper/ProductCategoryMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/Controller/WechatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/Controller/WechatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/SellApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/SellApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccountConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccountConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/dataobject/SellerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/dataobject/SellerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/enums/ResultEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/exception/SellException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/exception/SellException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/dataobject/SellerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/dataobject/SellerInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/enums/ResultEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/enums/ResultEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/service/impl/CateServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/service/impl/CateServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/exception/SellException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/exception/SellException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/service/impl/OrderServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,19 +49,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/enums/ResultEnum.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/mapper/ProductCategoryMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccountConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="208">
+              <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,69 +61,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/WechatMpConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/imooc/dataobject/mapper/ProductCategoryMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="838">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/dao/ProductCategoryDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+            <state relative-caret-position="56">
+              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerUserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/constant/CookieConstant.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/ProductCategory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="336">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/CookieUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/SellApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/ProjectUrlConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/OrderDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="196">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -144,9 +119,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -156,24 +131,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/converter/OrderMaster2OrderDTOConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/imooc/service/impl/OrderServiceImplTest1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/Controller/WeixinController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatMpConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/exception/SellException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/PayService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatPayConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/utils/JsonUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/PayServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/Controller/PayController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pay/create.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/Controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/repository/OrderDetailRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/imooc/service/impl/PayServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/imooc/repository/OrderDetailRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/imooc/service/impl/OrderServiceImplTest.java" />
@@ -196,17 +157,31 @@
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/SellerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/SellerInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/imooc/service/impl/SellerInfoServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccountConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatOpenConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/ProjectUrl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/Controller/WechatController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/constant/RedisConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/constant/CookieConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/utils/CookieUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/enums/ResultEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/exception/SellerAuthorizeException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/aspect/SellerAuthorizeAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/handler/ExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/PushMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/PushMessageImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccountConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/PushMessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/enums/ResultEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/exception/SellException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/exception/ResponseBankException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/handler/SellExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/SellApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/dataobject/mapper/ProductCategoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/imooc/dataobject/mapper/ProductCategoryMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/dataobject/dao/ProductCategoryDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -253,7 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,7 +278,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="imooc" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
+              <item name="aspect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sell" type="b2602c69:ProjectViewProjectNode" />
@@ -314,7 +288,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="imooc" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="dataobject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sell" type="b2602c69:ProjectViewProjectNode" />
@@ -324,7 +298,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="imooc" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="dataobject" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sell" type="b2602c69:ProjectViewProjectNode" />
@@ -334,8 +309,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="imooc" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="dataobject" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sell" type="b2602c69:ProjectViewProjectNode" />
@@ -345,7 +320,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="imooc" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sell" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sell" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="imooc" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sell" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sell" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="imooc" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sell" type="b2602c69:ProjectViewProjectNode" />
@@ -417,6 +412,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -441,9 +437,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.imooc.dataobject.mapper" />
       <recent name="com.imooc.service.impl" />
       <recent name="com.imooc.repository" />
       <recent name="com.imooc.dto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\sell\src\main\resources\templates\order" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.imooc.config" />
+      <recent name="com.imooc.prepare" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -451,13 +455,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\sell\src\main\resources\templates\common" />
       <recent name="D:\sell\src\main\resources\static" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.imooc.config" />
-      <recent name="com.imooc.prepare" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\sell\src\main\resources\templates\order" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -472,82 +469,82 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SellApplication">
-    <configuration name="OrderDetailRepositoryTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProductCategoryMapperTest.findByCategoryType">
+    <configuration name="ProductCategoryMapperTest.deleteByCategoryType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sell" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imooc.repository.*" />
+          <option name="PATTERN" value="com.imooc.dataobject.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.repository.OrderDetailRepositoryTest" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="PACKAGE_NAME" value="com.imooc.dataobject.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.dataobject.mapper.ProductCategoryMapperTest" />
+      <option name="METHOD_NAME" value="deleteByCategoryType" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceImplTest.createTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductCategoryMapperTest.findByCategoryName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sell" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imooc.service.impl.*" />
+          <option name="PATTERN" value="com.imooc.dataobject.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.service.impl.OrderServiceImplTest" />
-      <option name="METHOD_NAME" value="createTest" />
+      <option name="PACKAGE_NAME" value="com.imooc.dataobject.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.dataobject.mapper.ProductCategoryMapperTest" />
+      <option name="METHOD_NAME" value="findByCategoryName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SellerInfoRepositoryTest.findByOpenid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductCategoryMapperTest.findByCategoryType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sell" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imooc.repository.*" />
+          <option name="PATTERN" value="com.imooc.dataobject.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.repository.SellerInfoRepositoryTest" />
-      <option name="METHOD_NAME" value="findByOpenid" />
+      <option name="PACKAGE_NAME" value="com.imooc.dataobject.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.dataobject.mapper.ProductCategoryMapperTest" />
+      <option name="METHOD_NAME" value="findByCategoryType" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SellerInfoRepositoryTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductCategoryMapperTest.updateByCategoryType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sell" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imooc.repository.*" />
+          <option name="PATTERN" value="com.imooc.dataobject.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.repository.SellerInfoRepositoryTest" />
-      <option name="METHOD_NAME" value="save" />
+      <option name="PACKAGE_NAME" value="com.imooc.dataobject.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.dataobject.mapper.ProductCategoryMapperTest" />
+      <option name="METHOD_NAME" value="updateByCategoryType" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SellerInfoServiceImplTest.findSellerInfoByOpenid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductCategoryMapperTest.updateByObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sell" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imooc.service.impl.*" />
+          <option name="PATTERN" value="com.imooc.dataobject.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.service.impl.SellerInfoServiceImplTest" />
-      <option name="METHOD_NAME" value="findSellerInfoByOpenid" />
+      <option name="PACKAGE_NAME" value="com.imooc.dataobject.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.dataobject.mapper.ProductCategoryMapperTest" />
+      <option name="METHOD_NAME" value="updateByObject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -562,11 +559,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SellerInfoServiceImplTest.findSellerInfoByOpenid" />
-        <item itemvalue="JUnit.SellerInfoRepositoryTest.save" />
-        <item itemvalue="JUnit.SellerInfoRepositoryTest.findByOpenid" />
-        <item itemvalue="JUnit.OrderServiceImplTest.createTest" />
-        <item itemvalue="JUnit.OrderDetailRepositoryTest.test1" />
+        <item itemvalue="JUnit.ProductCategoryMapperTest.findByCategoryType" />
+        <item itemvalue="JUnit.ProductCategoryMapperTest.deleteByCategoryType" />
+        <item itemvalue="JUnit.ProductCategoryMapperTest.updateByObject" />
+        <item itemvalue="JUnit.ProductCategoryMapperTest.updateByCategoryType" />
+        <item itemvalue="JUnit.ProductCategoryMapperTest.findByCategoryName" />
       </list>
     </recent_temporary>
   </component>
@@ -596,7 +593,9 @@
       <workItem from="1568261574561" duration="1918000" />
       <workItem from="1568276756520" duration="9842000" />
       <workItem from="1568366761481" duration="8478000" />
-      <workItem from="1568376588795" duration="7439000" />
+      <workItem from="1568376588795" duration="7898000" />
+      <workItem from="1568420890251" duration="12545000" />
+      <workItem from="1568433897006" duration="2330000" />
     </task>
     <task id="LOCAL-00001" summary="订单（OrderDTO）按buyerOpenid分页功能完成">
       <created>1568087678302</created>
@@ -654,49 +653,55 @@
       <option name="project" value="LOCAL" />
       <updated>1568295042937</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="登录登出完成，校验还没有开始">
+      <created>1568384127131</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568384127131</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrderServiceImplTest_createTest - 2019.09.11 at 20h 34m 24s.xml">
-      <configuration name="OrderServiceImplTest.createTest" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_findByCategoryName - 2019.09.14 at 11h 57m 36s.xml">
+      <configuration name="ProductCategoryMapperTest.findByCategoryName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderServiceImplTest_createTest - 2019.09.11 at 20h 36m 14s.xml">
-      <configuration name="OrderServiceImplTest.createTest" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_updateByCategoryType - 2019.09.14 at 12h 09m 15s.xml">
+      <configuration name="ProductCategoryMapperTest.updateByCategoryType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderServiceImplTest_createTest - 2019.09.11 at 20h 37m 13s.xml">
-      <configuration name="OrderServiceImplTest.createTest" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_updateByCategoryType - 2019.09.14 at 12h 10m 31s.xml">
+      <configuration name="ProductCategoryMapperTest.updateByCategoryType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderServiceImplTest_createTest - 2019.09.11 at 20h 44m 21s.xml">
-      <configuration name="OrderServiceImplTest.createTest" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_updateByCategoryType - 2019.09.14 at 12h 11m 40s.xml">
+      <configuration name="ProductCategoryMapperTest.updateByCategoryType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderServiceImplTest_createTest - 2019.09.11 at 20h 45m 03s.xml">
-      <configuration name="OrderServiceImplTest.createTest" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_updateByCategoryType - 2019.09.14 at 12h 15m 39s.xml">
+      <configuration name="ProductCategoryMapperTest.updateByCategoryType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellerInfoRepositoryTest_findByOpenid - 2019.09.13 at 18h 00m 25s.xml">
-      <configuration name="SellerInfoRepositoryTest.findByOpenid" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_updateByObject - 2019.09.14 at 12h 24m 04s.xml">
+      <configuration name="ProductCategoryMapperTest.updateByObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellerInfoRepositoryTest_save - 2019.09.13 at 18h 04m 07s.xml">
-      <configuration name="SellerInfoRepositoryTest.save" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_updateByObject - 2019.09.14 at 12h 24m 20s.xml">
+      <configuration name="ProductCategoryMapperTest.updateByObject" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellerInfoServiceImplTest_findSellerInfoByOpenid - 2019.09.13 at 18h 18m 32s.xml">
-      <configuration name="SellerInfoServiceImplTest.findSellerInfoByOpenid" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_deleteByCategoryType - 2019.09.14 at 12h 31m 04s.xml">
+      <configuration name="ProductCategoryMapperTest.deleteByCategoryType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellerInfoServiceImplTest_findSellerInfoByOpenid - 2019.09.13 at 18h 18m 59s.xml">
-      <configuration name="SellerInfoServiceImplTest.findSellerInfoByOpenid" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_findByCategoryType - 2019.09.14 at 12h 40m 04s.xml">
+      <configuration name="ProductCategoryMapperTest.findByCategoryType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellerInfoServiceImplTest_findSellerInfoByOpenid - 2019.09.13 at 20h 00m 12s.xml">
-      <configuration name="SellerInfoServiceImplTest.findSellerInfoByOpenid" configurationId="JUnit" />
+    <history-entry file="ProductCategoryMapperTest_findByCategoryType - 2019.09.14 at 12h 42m 28s.xml">
+      <configuration name="ProductCategoryMapperTest.findByCategoryType" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91370000" />
+    <option name="totallyTimeSpent" value="106704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26013985" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26643357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -707,7 +712,7 @@
       <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3686327" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26675603" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5764075" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -746,7 +751,8 @@
     <MESSAGE value="渲染列表成功 public" />
     <MESSAGE value="抄袭完成分页" />
     <MESSAGE value="第九章完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="第九章完成" />
+    <MESSAGE value="登录登出完成，校验还没有开始" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录登出完成，校验还没有开始" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -788,12 +794,6 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/service/impl/OrderServiceImpl.java</url>
-          <line>135</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/imooc/repository/OrderDetailRepositoryTest.java</url>
           <line>25</line>
           <properties />
@@ -809,218 +809,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/repository/ProductCategoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding>
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/PagingAndSortingRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_171/src.zip!/java/io/Serializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/SellApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/imooc/SellApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.3.RELEASE/spring-data-jpa-1.11.3.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/imooc/service/impl/PayServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/imooc/repository/OrderDetailRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/imooc/service/impl/OrderServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pay/create.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/repository/ProductInfoRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_171/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="3296" column="43" lean-forward="true" selection-start-line="3296" selection-start-column="43" selection-end-line="3296" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dto/OrderDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/imooc/dto/OrderDTOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/enums/OrderStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/enums/PayStatusEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/error.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/success.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerOrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/order/detail.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3220">
-          <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/EnumUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/enums/CodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/order/list.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8786">
@@ -1092,24 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://C:/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="2938" column="32" lean-forward="true" selection-start-line="2938" selection-start-column="32" selection-end-line="2938" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/WechatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-769">
-          <caret line="32" column="71" lean-forward="true" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#userInfo#0;class#WechatController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,44 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccountConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/WechatMpConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.14/tomcat-embed-core-8.5.14.jar!/javax/servlet/http/Cookie.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/ProjectUrlConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="46" column="11" lean-forward="true" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1168,6 +908,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/WechatMpConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/context/request/RequestContextHolder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/context/request/RequestAttributes.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/context/request/ServletRequestAttributes.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/handler/ExceptionHandler.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/bind/annotation/ExceptionHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/ProjectUrlConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/constant/CookieConstant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1175,30 +971,239 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/CookieUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/aspect/SellerAuthorizeAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="10">
+          <caret line="33" column="5" selection-start-line="31" selection-start-column="25" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/exception/SellerAuthorizeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/impl/PushMessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/config/WechatAccountConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/PushMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/VO/ResultVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/utils/ResultVOUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/enums/ResultEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="-8">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/exception/SellException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/exception/ResponseBankException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/handler/SellExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1189#1190#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-886">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1848">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/WechatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="32" column="71" lean-forward="true" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#userInfo#0;class#WechatController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/SellerUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="444">
           <caret line="84" column="55" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/BuyerProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1082">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/Controller/PayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/ProductCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/SellApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/OrderDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/dao/ProductCategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/imooc/dataobject/mapper/ProductCategoryMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/dataobject/mapper/ProductCategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
         </state>
       </provider>
     </entry>
