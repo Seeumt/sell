@@ -10,6 +10,7 @@ import com.imooc.service.ProductService;
 import com.imooc.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -46,9 +47,8 @@ public class BuyerProductController {
     }
 
     @GetMapping("/list")
+    @Cacheable(cacheNames = "product",key = "123")
     public ResultVO list() {
-
-
         //1.查询所有上架的商品
         List<ProductInfo> productInfoList = productService.findUpAll();
         //2.查询类目（一次性查询）

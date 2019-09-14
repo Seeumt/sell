@@ -11,7 +11,6 @@ public class ProductForm {
     private String productName;
     private BigDecimal productPrice;
     private Integer productStock;
-
     private String productDescription;
     private String productIcon;
     private Integer categoryType;

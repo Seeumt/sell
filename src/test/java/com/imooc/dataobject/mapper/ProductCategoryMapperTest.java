@@ -74,4 +74,10 @@ public class ProductCategoryMapperTest {
         int result = productCategoryMapper.deleteByCategoryType(102);
         System.out.println(result);
     }
+
+    @Test
+    public void selectByCategoryType() {
+        ProductCategory productCategory = productCategoryMapper.selectByCategoryType(1);
+        System.out.println(productCategory);
+    }
 }

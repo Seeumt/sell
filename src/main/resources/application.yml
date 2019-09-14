@@ -31,7 +31,7 @@ logging:
 
 server:
   context-path: /sell
-  port: 8080
+  port: 8090
 #    com.imooc.LoggerTestBetter: debug
 
 wechat:
@@ -48,6 +48,8 @@ wechat:
   templateId:
     orderStatus: gfdjslkfhdsjlkfhldsk还不知道
 projectUrl:
-  wechatMpAuthorzie:  http://seeumt.natapp1.cc
-  wechatOpenAuthorzie: http://seeumt.natapp1.cc
+  wechatMpAuthorize:  http://seeumt.natapp1.cc
+  wechatOpenAuthorize: http://seeumt.natapp1.cc
   sell: http://seeumt.natapp1.cc
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

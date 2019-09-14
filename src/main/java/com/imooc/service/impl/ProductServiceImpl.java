@@ -7,7 +7,11 @@ import com.imooc.enums.ResultEnum;
 import com.imooc.exception.SellException;
 import com.imooc.repository.ProductInfoRepository;
 import com.imooc.service.ProductService;
+import org.hibernate.annotations.Cache;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -17,6 +21,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "product")
 public class ProductServiceImpl implements ProductService {
 
     @Resource
@@ -25,6 +30,7 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
+    @Cacheable(key = "123")
     public ProductInfo findOne(String productId) {
         return repository.findOne(productId);
     }
@@ -38,6 +44,7 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
+    @CachePut(key = "123")
     public ProductInfo save(ProductInfo productInfo) {
         return repository.save(productInfo);
     }
