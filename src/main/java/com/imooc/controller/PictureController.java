@@ -27,7 +27,7 @@ public class PictureController {
      * 主页
      * @return
      */
-//    @GetMapping("/")
+//    @GetMapping("/add")
 //    public String toIndex() {
 //        return "add";
 //    }

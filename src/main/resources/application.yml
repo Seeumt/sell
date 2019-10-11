@@ -9,7 +9,11 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-
+  mail:
+    host: smtp.qq.com
+    username: seeumt@qq.com
+    password: hbpiuaclwfaiidig
+    default-encoding: utf-8
 
 
 
@@ -56,7 +60,13 @@ mybatis:
 
 aliyunOss:
   endpoint: http://oss-cn-hangzhou.aliyuncs.com
-  access-key-id: LTAI4Fr8bs4fisHj6ycb3oxV
-  access-key-secret: 1XN63B8wQwq1RPWA0nrxm5YU7YfgDY
-  bucket-name: seeumt
-  url-prefix: http://seeumt.oss-cn-hangzhou.aliyuncs.com/
+  accessKeyId: LTAI4Fr8bs4fisHj6ycb3oxV
+  accessKeySecret: 1XN63B8wQwq1RPWA0nrxm5YU7YfgDY
+  bucketName: seeumt
+  urlPrefix: http://seeumt.oss-cn-hangzhou.aliyuncs.com/
+
+qqmail:
+  sender: seeumt@qq.com
+#  sender: Tips 501 mail from address must be same as authorization user
+  subject: Tips-近来可好？
+  text: 天凉了，多保重。
