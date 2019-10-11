@@ -21,7 +21,7 @@ spring:
 logging:
   pattern:
     console: '%d - %msg%n'
-#  path: /var/log/tomcat 输出的有一个就好了 没有自己设置文件名称 就默认为 spring.log
+  #  path: /var/log/tomcat 输出的有一个就好了 没有自己设置文件名称 就默认为 spring.log
   file: /var/log/tomcat/sell.log/
 #  level:
 #    root: debug
@@ -39,8 +39,8 @@ wechat:
   mpAppSecret: f882cb83cced8367542067d71208de03
   openAppId:
   openAppSecret:
-#  mpAppId: wxd898fcb01713c658
-#  mpAppSecret: 29d8a650db31472aa87800e3b0d739f2
+  #  mpAppId: wxd898fcb01713c658
+  #  mpAppSecret: 29d8a650db31472aa87800e3b0d739f2
   mchId: 1409146202
   mchKey: c976503d34ca432c601361f969fd8d85
   keyPath: /var/weixin_cert/h5.p12
@@ -53,3 +53,10 @@ projectUrl:
   sell: http://seeumt.natapp1.cc
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+
+aliyunOss:
+  endpoint: http://oss-cn-hangzhou.aliyuncs.com
+  access-key-id: LTAI4Fr8bs4fisHj6ycb3oxV
+  access-key-secret: 1XN63B8wQwq1RPWA0nrxm5YU7YfgDY
+  bucket-name: seeumt
+  url-prefix: http://seeumt.oss-cn-hangzhou.aliyuncs.com/

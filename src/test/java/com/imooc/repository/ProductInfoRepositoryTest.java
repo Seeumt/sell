@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
 public class ProductInfoRepositoryTest {
     @Autowired
     private ProductInfoRepository repository;
+
     @Test
     public void test1() {
         List<ProductInfo> byProductStatus = repository.findByProductStatus(1);

@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 
 @Component
 
-public class WechatMpConfig {
+public class WechatMpConfig{
     @Resource
     private WechatAccountConfig accountConfig;
 

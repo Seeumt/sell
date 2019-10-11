@@ -27,8 +27,8 @@ import javax.servlet.http.HttpServletRequest;
 public class SellerAuthorizeAspect {
     @Autowired
     private StringRedisTemplate redisTemplate;
-    @Pointcut("execution(public * com.imooc.Controller.Seller*.*(..))"+
-            "&&!execution(public * com.imooc.Controller.SellerUserController.*(..))")
+    @Pointcut("execution(public * com.imooc.controller.Seller*.*(..))"+
+            "&&!execution(public * com.imooc.controller.SellerUserController.*(..))")
     public void verify() {
 
     }

@@ -1,4 +1,4 @@
-package com.imooc.Controller;
+package com.imooc.controller;
 
 import com.imooc.VO.ProductInfoVO;
 import com.imooc.VO.ProductVO;
@@ -9,18 +9,15 @@ import com.imooc.service.CategoryService;
 import com.imooc.service.ProductService;
 import com.imooc.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 

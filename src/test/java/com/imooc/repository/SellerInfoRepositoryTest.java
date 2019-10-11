@@ -20,7 +20,7 @@ public class SellerInfoRepositoryTest {
     @Test
     public void save() {
         SellerInfo sellerInfo = new SellerInfo();
-        sellerInfo.setSellerId("2");
+        sellerInfo.setSellerId("8");
         sellerInfo.setUsername("James");
         sellerInfo.setPassword("123456");
         sellerInfo.setOpenid("888wx");

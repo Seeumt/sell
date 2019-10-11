@@ -17,8 +17,8 @@ import java.util.Date;
 @DynamicUpdate
 
 public class ProductInfo implements Serializable {
-    private static final long serialVersionUID = 3068837394742385888L;
 
+    private static final long serialVersionUID = 3068837394742385888L;
     @Id
     private String productId;
     private String productName;
