@@ -1,5 +1,6 @@
 package com.imooc.dataobject;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ public class TPicture {
     @Id
     @GeneratedValue
     private Integer id;
+
     private String picName;
     private String url;
 

@@ -2,6 +2,7 @@ package com.imooc.controller;
 
 import com.imooc.dto.OrderDTO;
 import com.imooc.service.OrderService;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController("order")
-@RequestMapping("/order")
+//@RequestMapping("/order")
+//@Api(tags = "默认是xxx-controller --> order",description = "默认是 Xxx Controller，--> 订单描述 (已过时)")
 public class OrderController {
 
     @Resource

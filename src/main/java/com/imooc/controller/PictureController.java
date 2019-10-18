@@ -5,6 +5,7 @@ import com.aliyun.oss.OSSException;
 import com.imooc.dataobject.TPicture;
 import com.imooc.service.PictureService;
 import com.imooc.utils.AliyunOssUtil;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -50,6 +51,7 @@ public class PictureController {
      * @throws ClientException
      * @throws OSSException
      */
+    @ApiOperation(value = "value取代了方法名称，在外边：AliyunOss对象储存",notes = "notes在里边：AliyunOss")
     @PostMapping("/insert")
     @ResponseBody
     public Map<String,String> insertPicture(@RequestParam("fileupload") MultipartFile fileupload, String picName, HttpServletRequest request) throws OSSException, ClientException, IOException {
